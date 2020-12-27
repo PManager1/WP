@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<!-- saved from url=(0041)https://www.blackstone.com/cookie-notice/ -->
+<html lang="en-US" class="js"><head style=""><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<script type="text/javascript" src="./Cookie Policy (EU) - Blackstone_files/NRJS-a87f8c3ef941511fee4"></script><script src="./Cookie Policy (EU) - Blackstone_files/nr-1184.min.js"></script><script async="" src="./Cookie Policy (EU) - Blackstone_files/insight.old.min.js"></script><script src="./Cookie Policy (EU) - Blackstone_files/363036464153754" async=""></script><script async="" src="./Cookie Policy (EU) - Blackstone_files/fbevents.js"></script><script type="text/javascript" async="" src="./Cookie Policy (EU) - Blackstone_files/uwt.js"></script><script type="text/javascript" async="" src="./Cookie Policy (EU) - Blackstone_files/analytics.js"></script><script type="text/javascript" async="" src="./Cookie Policy (EU) - Blackstone_files/insight.min.js"></script><script type="text/javascript" async="" src="./Cookie Policy (EU) - Blackstone_files/js"></script><script async="" src="./Cookie Policy (EU) - Blackstone_files/gtm.js"></script><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"NRJS-a87f8c3ef941511fee4",applicationID:"333231826"};window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var i=t[n]={exports:{}};e[n][0].call(i.exports,function(t){var i=e[n][1][t];return r(i||t)},i,i.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(e,t,n){function r(){}function i(e,t,n){return function(){return o(e,[u.now()].concat(c(arguments)),t?null:this,n),t?void 0:this}}var o=e("handle"),a=e(6),c=e(7),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,t){s[t]=i(p+t,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,i="function"==typeof t;return o(l+"tracer",[u.now(),e,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return t.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],n),e}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=i(l+t)}),newrelic.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,t])}},{}],2:[function(e,t,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=e(8);t.exports=r,t.exports.offset=a,t.exports.getLastTimestamp=i},{}],3:[function(e,t,n){function r(e,t){var n=e.getEntries();n.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,t){var n=e.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var t=Math.round(e.timeStamp),n={type:e.type};t<=p.now()?n.fid=p.now()-t:t>p.offset&&t<=Date.now()?(t-=p.offset,n.fid=p.now()-t):t=p.now(),g=!0,d("timing",["fi",t,n])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(5),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,y=["click","keydown","mousedown","pointerdown","touchstart"];y.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],4:[function(e,t,n){function r(e,t){if(!i)return!1;if(e!==i)return!1;if(!t)return!0;if(!o)return!1;for(var n=o.split("."),r=t.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}t.exports={agent:i,version:o,match:r}},{}],5:[function(e,t,n){function r(e){function t(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,t,!1)}t.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],6:[function(e,t,n){function r(e,t){var n=[],r="",o=0;for(r in e)i.call(e,r)&&(n[o]=t(r,e[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],7:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,i=n-t||0,o=Array(i<0?0:i);++r<i;)o[r]=e[t+r];return o}t.exports=r},{}],8:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function i(e){function t(e){return e&&e instanceof r?e:e?f(e,c,o):o()}function n(n,r,i,o){if(!p.aborted||o){e&&e(n,r,i);for(var a=t(i),c=v(n),f=c.length,u=0;u<f;u++)c[u].apply(a,r);var d=s[w[n]];return d&&d.push([b,n,r,a]),a}}function l(e,t){h[e]=v(e).concat(t)}function m(e,t){var n=h[e];if(n)for(var r=0;r<n.length;r++)n[r]===t&&n.splice(r,1)}function v(e){return h[e]||[]}function g(e){return d[e]=d[e]||i(n)}function y(e,t){u(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var h={},w={},b={on:l,addEventListener:l,removeEventListener:m,emit:n,get:g,listeners:v,context:t,buffer:y,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var c="nr@context",f=e("gos"),u=e(6),s={},d={},p=t.exports=i();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(i.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[t]=r,r}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){i.buffer([e],r),i.emit(e,t,n)}var i=e("ee").get("handle");t.exports=r,r.ee=i},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!E++){var e=b.info=NREUM.info,t=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return u.abort();f(h,function(t,n){e[t]||(e[t]=n)});var n=a();c("mark",["onload",n+b.offset],null,"api"),c("timing",["load",n]);var r=p.createElement("script");r.src="https://"+e.agent,t.parentNode.insertBefore(r,t)}}function i(){"complete"===p.readyState&&o()}function o(){c("mark",["domContent",a()+b.offset],null,"api")}var a=e(2),c=e("handle"),f=e(6),u=e("ee"),s=e(4),d=window,p=d.document,l="addEventListener",m="attachEvent",v=d.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:v,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var y=""+location,h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1184.min.js"},w=v&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),b=t.exports={offset:a.getLastTimestamp(),now:a,origin:y,features:{},xhrWrappable:w,userAgent:s};e(1),e(3),p[l]?(p[l]("DOMContentLoaded",o,!1),d[l]("load",r,!1)):(p[m]("onreadystatechange",i),d[m]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0},{}],"wrap-function":[function(e,t,n){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(7),a="nr@original",c=Object.prototype.hasOwnProperty,f=!1;t.exports=function(e,t){function n(e,t,n,i){function nrWrapper(){var r,a,c,f;try{a=this,r=o(arguments),c="function"==typeof n?n(r,a):n||{}}catch(u){p([u,"",[r,a,i],c])}s(t+"start",[r,a,i],c);try{return f=e.apply(a,r)}catch(d){throw s(t+"err",[r,a,d],c),d}finally{s(t+"end",[r,a,f],c)}}return r(e)?e:(t||(t=""),nrWrapper[a]=e,d(e,nrWrapper),nrWrapper)}function u(e,t,i,o){i||(i="");var a,c,f,u="-"===i.charAt(0);for(f=0;f<t.length;f++)c=t[f],a=e[c],r(a)||(e[c]=n(a,u?c+i:i,o,c))}function s(n,r,i){if(!f||t){var o=f;f=!0;try{e.emit(n,r,i,t)}catch(a){p([a,n,r,i])}f=o}}function d(e,t){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(e);return n.forEach(function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){return e[n]=t,t}})}),t}catch(r){p([r])}for(var i in e)c.call(e,i)&&(t[i]=e[i]);return t}function p(t){try{e.emit("internal-error",t)}catch(n){}}return e||(e=i),n.inPlace=u,n.flag=a,n}},{}]},{},["loader"]);</script>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="theme-color" content="#d23226">
+		<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+<title>Cookie Policy (EU) - Blackstone</title>
+
+<!-- This site is optimized with the Yoast SEO plugin v12.7.1 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<link rel="canonical" href="https://www.blackstone.com/cookie-notice/">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Cookie Policy (EU) - Blackstone">
+<meta property="og:description" content="Cookie Policy (EU) Last updated:  May 23, 2018 This notice explains what cookies are and the types of cookies Blackstone (“we” or “Blackstone“) use on Blackstone.com, bxaccess.com and other websites or applications that may link to this Cookie Notice (collectively, the “Sites”). What are cookies?  A “cookie” is a text file that websites send to a …">
+<meta property="og:url" content="https://www.blackstone.com/cookie-notice/">
+<meta property="og:site_name" content="Blackstone">
+<meta property="article:publisher" content="https://www.facebook.com/blackstone">
+<meta property="og:image" content="https://www.blackstone.com/wp-content/uploads/sites/2/2020/01/bx_homepage_gettyimages_149615823_ret4.jpg?resize=1024,538">
+<meta property="og:image:secure_url" content="https://www.blackstone.com/wp-content/uploads/sites/2/2020/01/bx_homepage_gettyimages_149615823_ret4.jpg?resize=1024,538">
+<meta property="og:image:width" content="1024">
+<meta property="og:image:height" content="538">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Cookie Policy (EU) Last updated:  May 23, 2018 This notice explains what cookies are and the types of cookies Blackstone (“we” or “Blackstone“) use on Blackstone.com, bxaccess.com and other websites or applications that may link to this Cookie Notice (collectively, the “Sites”). What are cookies?  A “cookie” is a text file that websites send to a […]">
+<meta name="twitter:title" content="Cookie Policy (EU) - Blackstone">
+<meta name="twitter:site" content="@blackstone">
+<meta name="twitter:image" content="https://www.blackstone.com/wp-content/uploads/sites/2/2020/01/bx_homepage_gettyimages_149615823_ret4.jpg">
+<meta name="twitter:creator" content="@blackstone">
+<script type="application/ld+json" class="yoast-schema-graph yoast-schema-graph--main">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.blackstone.com/#organization","name":"Blackstone","url":"https://www.blackstone.com/","sameAs":["https://www.facebook.com/blackstone","https://www.instagram.com/blackstone/","https://www.linkedin.com/company/blackstonegroup/","https://twitter.com/blackstone"],"logo":{"@type":"ImageObject","@id":"https://www.blackstone.com/#logo","url":"https://www.blackstone.com/wp-content/uploads/sites/2/2020/07/Blackstone-PRESS-QUALITY-6312.png","width":1652,"height":646,"caption":"Blackstone"},"image":{"@id":"https://www.blackstone.com/#logo"}},{"@type":"WebSite","@id":"https://www.blackstone.com/#website","url":"https://www.blackstone.com/","name":"Blackstone","publisher":{"@id":"https://www.blackstone.com/#organization"},"potentialAction":{"@type":"SearchAction","target":"https://www.blackstone.com/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"WebPage","@id":"https://www.blackstone.com/cookie-notice/#webpage","url":"https://www.blackstone.com/cookie-notice/","inLanguage":"en-US","name":"Cookie Policy (EU) - Blackstone","isPartOf":{"@id":"https://www.blackstone.com/#website"},"datePublished":"2020-01-21T21:25:25+00:00","dateModified":"2020-08-17T16:02:19+00:00"}]}</script>
+<!-- / Yoast SEO plugin. -->
+
+<link rel="dns-prefetch" href="https://s.w.org/">
+<link rel="alternate" type="application/rss+xml" title="Blackstone » Feed" href="https://www.blackstone.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="Blackstone » Comments Feed" href="https://www.blackstone.com/comments/feed/">
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.blackstone.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.6"}};
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,8205,55356,57212],[55357,56424,8203,55356,57212])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script><script src="./Cookie Policy (EU) - Blackstone_files/wp-emoji-release.min.js" type="text/javascript" defer=""></script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel="stylesheet" id="all-css-0" href="./Cookie Policy (EU) - Blackstone_files/saved_resource" type="text/css" media="all">
+<style id="wp-block-library-inline-css">
+.has-text-align-justify{text-align:justify;}
+</style>
+<link rel="stylesheet" id="print-css-0" href="./Cookie Policy (EU) - Blackstone_files/print.css" type="text/css" media="print">
+<link rel="https://api.w.org/" href="https://www.blackstone.com/wp-json/"><link rel="alternate" type="application/json" href="https://www.blackstone.com/wp-json/wp/v2/pages/244"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.blackstone.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.blackstone.com/wp-includes/wlwmanifest.xml"> 
+<meta name="generator" content="WordPress 5.6">
+<link rel="shortlink" href="https://www.blackstone.com/?p=244">
+<link rel="alternate" type="application/json+oembed" href="https://www.blackstone.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.blackstone.com%2Fcookie-notice%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://www.blackstone.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.blackstone.com%2Fcookie-notice%2F&amp;format=xml">
+<!-- Stream WordPress user activity plugin v3.5.0 -->
+<style type="text/css">img#wpstats{display:none}</style><link rel="manifest" href="https://www.blackstone.com/wp-content/themes/blackstone-main/manifest.json"><link rel="icon" href="https://www.blackstone.com/wp-content/uploads/sites/2/2020/01/bx-favicon-192.png?w=32" sizes="32x32">
+<link rel="icon" href="https://www.blackstone.com/wp-content/uploads/sites/2/2020/01/bx-favicon-192.png?w=192" sizes="192x192">
+<link rel="apple-touch-icon" href="https://www.blackstone.com/wp-content/uploads/sites/2/2020/01/bx-favicon-192.png?w=180">
+<meta name="msapplication-TileImage" content="https://www.blackstone.com/wp-content/uploads/sites/2/2020/01/bx-favicon-192.png?w=192">
+	</head>
+	<body class="page-template page-template-templates page-template-page-empty page-template-templatespage-empty-php page page-id-244 wp-embed-responsive blackstone-theme blackstone js-stickybit-parent" x-ms-format-detection="none">
+		
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MGLNRHM"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+					<a href="https://www.blackstone.com/cookie-notice/#content" class="screen-reader-text is-focusable">Skip to Content</a>
+			<a href="https://www.blackstone.com/cookie-notice/#footer" class="screen-reader-text is-focusable">Skip to Footer</a>
+
+									
+<header class="site-header site-header--on-white js-is-sticky js-is-sticky--change" role="banner" style="position: sticky; top: 0px;">
+	<div class="container-fluid container-fluid--full site-header__inner">
+
+		<a href="https://www.blackstone.com/" class="site-header__logo" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" data-gtm-label="Home">
+			<img src="./Cookie Policy (EU) - Blackstone_files/blackstone-logo.png" alt="Blackstone Logo" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" data-gtm-label="Home">
+			<h1 class="screen-reader-text" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" data-gtm-label="Home">Blackstone</h1>
+		</a>
+		<!-- /.site-header__logo -->
+
+					<a href="https://www.blackstone.com/cookie-notice/#primary-nav" class="site-header__toggle" aria-controls="primary-nav" aria-expanded="true" aria-hidden="true">
+				<span class="site-header__toggle-icon" aria-hidden="true"></span>
+				<span class="screen-reader-text">Toggle Menu</span>
+			</a>
+			<!-- /.site-header__toggle -->
+
+			<nav class="site-header__nav" role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement" aria-label="Primary Navigation" aria-hidden="false">
+
+				<ul id="primary-nav" class="menu site-header__menu" data-action="hover" aria-hidden="false"><li id="menu-item-32" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-32"><a href="https://www.blackstone.com/the-firm/" aria-controls="tenUp-submenu-0" aria-haspopup="true" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" data-gtm-label="The Firm">The Firm</a>
+<ul class="sub-menu" id="tenUp-submenu-0" aria-label="Submenu" aria-hidden="true">
+<li class="menu-item menu-item--title"><span class="is-style-h5">The Firm</span></li>
+	<li id="menu-item-33" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-33"><a href="https://www.blackstone.com/the-firm/" class="is-style-cta" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" data-gtm-label="The Firm | Overview">Overview</a></li>
+	<li id="menu-item-256" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-256"><a href="https://www.blackstone.com/the-firm/our-people/" class="is-style-cta" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" data-gtm-label="The Firm | Our People">Our People</a></li>
+	<li id="menu-item-257" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-257"><a href="https://www.blackstone.com/investors/overview/" class="is-style-cta" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" data-gtm-label="The Firm | Our Clients">Our Clients</a></li>
+</ul>
+</li>
+<li id="menu-item-34" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-34"><a href="https://www.blackstone.com/our-businesses/" aria-controls="tenUp-submenu-1" aria-haspopup="true" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" data-gtm-label="Our Businesses">Our Businesses</a>
+<ul class="sub-menu" aria-hidden="true" id="tenUp-submenu-1" aria-label="Submenu">
+<li class="menu-item menu-item--title"><span class="is-style-h5">Our Businesses</span></li>
+	<li id="menu-item-435" class="menu-item menu-item--column menu-item-type-column menu-item-object-custom menu-item-has-children menu-item-435 menu-item--column--auto"><a class="is-style-cta" style="display: none;" aria-controls="tenUp-submenu-2" aria-haspopup="true">Menu Column</a>
+	<ul class="sub-menu" aria-hidden="true" id="tenUp-submenu-2" aria-label="Submenu">
+		<li id="menu-item-44" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-44"><a href="https://www.blackstone.com/our-businesses/private-equity/" class="is-style-cta" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" data-gtm-label="Our Businesses | Private Equity">Private Equity</a></li>
+		<li id="menu-item-259" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-259"><a href="https://www.blackstone.com/our-businesses/real-estate/" class="is-style-cta" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" data-gtm-label="Our Businesses | Real Estate">Real Estate</a></li>
+		<li id="menu-item-276" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-276"><a href="https://www.blackstone.com/our-businesses/credit/" class="is-style-cta" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" data-gtm-label="Our Businesses | Credit">Credit</a></li>
+	</ul>
+</li>
+	<li id="menu-item-437" class="menu-item menu-item--column menu-item-type-column menu-item-object-custom menu-item-has-children menu-item-437 menu-item--column--auto"><a class="is-style-cta" style="display: none;" aria-controls="tenUp-submenu-3" aria-haspopup="true">Menu Column</a>
+	<ul class="sub-menu" aria-hidden="true" id="tenUp-submenu-3" aria-label="Submenu">
+		<li id="menu-item-282" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-282"><a href="https://www.blackstone.com/our-businesses/hedge-fund-solutions-baam/" class="is-style-cta" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" data-gtm-label="Our Businesses | Hedge Fund Solutions (BAAM)">Hedge Fund Solutions (BAAM)</a></li>
+		<li id="menu-item-289" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-289"><a href="https://www.blackstone.com/our-businesses/strategic-partners/" class="is-style-cta" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" data-gtm-label="Our Businesses | Strategic Partners">Strategic Partners</a></li>
+		<li id="menu-item-303" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-303"><a href="https://www.blackstone.com/our-businesses/tactical-opportunities/" class="is-style-cta" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" data-gtm-label="Our Businesses | Tactical Opportunities">Tactical Opportunities</a></li>
+	</ul>
+</li>
+	<li id="menu-item-439" class="menu-item menu-item--column menu-item-type-column menu-item-object-custom menu-item-has-children menu-item-439 menu-item--column--auto"><a class="is-style-cta" style="display: none;" aria-controls="tenUp-submenu-4" aria-haspopup="true">Menu Column</a>
+	<ul class="sub-menu" aria-hidden="true" id="tenUp-submenu-4" aria-label="Submenu">
+		<li id="menu-item-310" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-310"><a href="https://www.blackstone.com/our-businesses/infrastructure/" class="is-style-cta" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" data-gtm-label="Our Businesses | Infrastructure">Infrastructure</a></li>
+		<li id="menu-item-317" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-317"><a href="https://www.blackstone.com/our-businesses/insurance-solutions/" class="is-style-cta" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" data-gtm-label="Our Businesses | Insurance Solutions">Insurance Solutions</a></li>
+		<li id="menu-item-326" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-326"><a href="https://www.blackstone.com/our-businesses/life-sciences/" class="is-style-cta" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" data-gtm-label="Our Businesses | Life Sciences">Life Sciences</a></li>
+	</ul>
+</li>
+	<li id="menu-item-440" class="menu-item menu-item--column menu-item-type-column menu-item-object-custom menu-item-has-children menu-item-440 menu-item--column--auto"><a class="is-style-cta" style="display: none;" aria-controls="tenUp-submenu-5" aria-haspopup="true">Menu Column</a>
+	<ul class="sub-menu" aria-hidden="true" id="tenUp-submenu-5" aria-label="Submenu">
+		<li id="menu-item-6659" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6659"><a href="https://www.blackstone.com/our-businesses/portfolio-operations/" class="is-style-cta" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" data-gtm-label="Our Businesses | Portfolio Operations">Portfolio Operations</a></li>
+		<li id="menu-item-358" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-358"><a href="https://www.blackstone.com/our-businesses/technologyandinnovations/" class="is-style-cta" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" data-gtm-label="Our Businesses | Technology And Innovations">Technology and Innovations</a></li>
+		<li id="menu-item-441" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-441"><a href="https://www.blackstone.com/our-businesses/registered-products/" class="is-style-cta" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" data-gtm-label="Our Businesses | Registered Products">Registered Products</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li id="menu-item-35" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-35"><a href="https://www.blackstone.com/our-impact/" aria-controls="tenUp-submenu-6" aria-haspopup="true" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" data-gtm-label="Our Impact">Our Impact</a>
+<ul class="sub-menu" aria-hidden="true" id="tenUp-submenu-6" aria-label="Submenu">
+	<li id="menu-item-442" class="menu-item menu-item--column menu-item-type-column menu-item-object-custom menu-item-has-children menu-item-442 menu-item--column--auto"><a class="is-style-cta" style="display: none;" aria-controls="tenUp-submenu-7" aria-haspopup="true">Menu Column</a>
+	<ul class="sub-menu" aria-hidden="true" id="tenUp-submenu-7" aria-label="Submenu">
+<li class="menu-item menu-item--title"><span class="is-style-h5">Blackstone Charitable Foundation</span></li>
+		<li id="menu-item-260" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-260"><a href="https://www.blackstone.com/our-impact/blackstone-charitable-foundation/" class="is-style-cta" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" data-gtm-label="Blackstone Charitable Foundation | Overview">Overview</a></li>
+	</ul>
+</li>
+	<li id="menu-item-444" class="menu-item menu-item--column menu-item-type-column menu-item-object-custom menu-item-has-children menu-item-444 menu-item--column--separator menu-item--column--auto"><a class="is-style-cta" style="display: none;" aria-controls="tenUp-submenu-8" aria-haspopup="true">Menu Column</a>
+	<ul class="sub-menu" aria-hidden="true" id="tenUp-submenu-8" aria-label="Submenu">
+<li class="menu-item menu-item--title"><span class="is-style-h5">Corporate Social Responsibility</span></li>
+		<li id="menu-item-261" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-261"><a href="https://www.blackstone.com/our-impact/corporate-social-responsibility/" class="is-style-cta" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" data-gtm-label="Corporate Social Responsibility | Overview">Overview</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li id="menu-item-17" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-17"><a href="https://ir.blackstone.com/investors/shareholders/default.aspx" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" data-gtm-label="Shareholders">Shareholders</a></li>
+<li id="menu-item-41" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-41"><a href="https://www.blackstone.com/insights/" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" data-gtm-label="Insights">Insights</a></li>
+<li id="menu-item-40" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-40"><a href="https://www.blackstone.com/careers/" aria-controls="tenUp-submenu-9" aria-haspopup="true" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" data-gtm-label="Careers">Careers</a>
+<ul class="sub-menu" aria-hidden="true" id="tenUp-submenu-9" aria-label="Submenu">
+<li class="menu-item menu-item--title"><span class="is-style-h5">Careers</span></li>
+	<li id="menu-item-366" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-366"><a href="https://www.blackstone.com/careers/why-blackstone/" class="is-style-cta" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" data-gtm-label="Careers | Why Blackstone">Why Blackstone</a></li>
+	<li id="menu-item-262" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-262"><a href="https://www.blackstone.com/careers/diversity-inclusion/" class="is-style-cta" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" data-gtm-label="Careers | Diversity &amp; Inclusion">Diversity &amp; Inclusion</a></li>
+</ul>
+</li>
+<li id="menu-item-20" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20"><a href="https://www.bxaccess.com/portal/" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" data-gtm-label="LP Login">LP Login</a></li>
+<li class="menu-item"><a href="https://www.blackstone.com/?s=" class="search-icon" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" data-gtm-label="Search"><svg xmlns="http://www.w3.org/2000/svg" width="66.768" height="66.059" viewBox="0 0 66.768 66.059">
+	<g transform="translate(-10.924 -11.174)">
+		<g transform="translate(10.924 63.174) rotate(-90)" fill="none" stroke-width="7">
+			<circle cx="26" cy="26" r="26" stroke="none"></circle>
+			<circle cx="26" cy="26" r="23.5" fill="none"></circle>
+		</g>
+		<line y2="30" transform="translate(54.711 54.252) rotate(-45)" fill="none" stroke-width="7"></line>
+	</g>
+</svg>
+<span class="screen-reader-text">Search</span></a></li></ul>
+			</nav>
+			<!-- /.site-header__nav -->
+			</div>
+</header>
+<!-- /.site-header -->
+
+			<div id="content" role="main" class="site-content">
+		
+	<div class="container-fluid">
+									
+<h1 class="mt-xlarge mb-small">Cookie Policy (EU)</h1>
+
+
+
+<p class="mt-xlarge">Last updated:&nbsp;&nbsp;<strong>May 23, 2018</strong></p>
+
+
+
+<p class="is-style-body-2">This notice explains what cookies are and the types of cookies Blackstone (“<strong>we</strong>” or “<strong>Blackstone</strong>“) use on Blackstone.com, bxaccess.com and other websites or applications that may link to this Cookie Notice (collectively, the “<strong>Sites</strong>”).<br><br><strong>What are cookies?</strong>&nbsp;<br><br>A “cookie” is a text file that websites send to a visitor’s computer or other Internet-connected device to uniquely identify the visitor’s browser or to store information or settings on the device.&nbsp;Cookies are then sent back to the originating website on each subsequent visit, or to another website that recognises that cookie. Cookies are useful because they allow a website to recognise a visitor’s device and to target the content displayed to the visitor’s interests.</p>
+
+
+
+<p><strong>Do we use cookies on the Sites and, if so, why?</strong>&nbsp;</p>
+
+
+
+<p class="is-style-body-2">Yes. By using our website you agree that, unless you have set your computer’s browser to reject them, we can place the types of cookies set out in the table below on your device, and use that data in accordance with this policy.</p>
+
+
+
+<p class="is-style-body-2">We use cookies (including HTTP, HTML5 and Flash cookies) and similar technologies (such as web beacons and JavaScript) to: (i) customize and improve the users’ visits to our Sites; (ii) deliver content tailored to the users’ interests and the manner in which they browse our Sites; and (iii) manage our Sites and other aspects of our business.&nbsp;<br><br><strong>What types of cookies are used on the Sites and what choices do you have?</strong>&nbsp;<br><br>Below is a list of the cookies that we would like to use on our Sites. You can indicate your acceptance of all cookies or a selection of cookies that you allow us to use on our Sites. Please note that depending on your selection, you may not be able to take full advantage of the Sites. Please also understand that a cookie will be placed on your device to allow us to remember the selection you make.</p>
+
+
+
+<figure class="wp-block-table"><table><thead><tr><th>Cookie Type</th><th>Description</th></tr></thead><tbody><tr><td>Strictly Necessary Cookies</td><td>These cookies are necessary for the Sites to work, and enable you to move around the Sites and use their services and features. Disabling these cookies will encumber the Sites’ performance and may make these services and features unavailable. Strictly necessary cookies are used to collect session ID and authentication data. These are session cookies, which expire when you close your browser session.<br><strong>ASP.NET_SessionID:&nbsp;</strong>this cookie contains the user session identifier which expires at the end of every session.</td></tr><tr><td>Functional Cookies</td><td>Functional cookies allow the Sites to help maintain your session and remember the choices you have made in order to provide functionality for your benefit. Functional cookies are used to collect information about your language preferences and other preferences indicated during your visit to the Sites. For example, functional “session” cookies allow the Sites to remember settings specific to you, such as your country selection, which ultimately improves your web experience. Functional cookies also include persistent cookies which are used to remember your preferences when you subsequently visit our Sites. Functional “persistent” cookies expire after 7 days.</td></tr><tr><td>Analytic Cookies</td><td>Analytic cookies are used to gather statistics about the use of the Sites in order to improve the performance and design of the Sites and our services. For these purposes, analytic cookies collect information about your device type, operating system type, browser type, domain, other system settings, IP address, referring URLs, information on actions taken on the Sites and the dates and times of your visits, as well as the country and time zone in which your device is located. These cookies are provided by our third-party analytics tool provider (Google Analytics) and the information obtained through these cookies will be disclosed to, or collected directly by, this third-party service provider. For more information about Google Analytic’s cookie and information practices (including the types of cookies used and their expiration date), please visit the link below:<br><br><a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noreferrer noopener" data-gtm-category="Content Engagement" data-gtm-action="CTA Click" data-gtm-label="Google Analytics">Google Analytics</a></td></tr><tr><td>Third Party Cookies</td><td>We partner with third parties to provide you with connections to certain social networks (such as, Facebook, Twitter and LinkedIn) and to provide you with additional features (such as, YouTube and Vimeo). By using the Sites or engaging with third-party plugins and widgets on our Sites, such third parties may place session or persistent cookies, or similar technologies, on your browser. These technologies may provide the third parties information about your visit so that they can present you with advertisements for Blackstone products and services which may be of interest to you. This helps us track the effectiveness of our marketing efforts. The use of these cookies is subject to such third party’s own cookie policies linked below:<br><br><a href="http://www.youtube.com/" target="_blank" rel="noreferrer noopener" data-gtm-category="Content Engagement" data-gtm-action="CTA Click" data-gtm-label="YouTube">YouTube</a><br><a href="http://www.vimeo.com/" target="_blank" rel="noreferrer noopener" data-gtm-category="Content Engagement" data-gtm-action="CTA Click" data-gtm-label="Vimeo">Vimeo</a><br><a href="http://www.facebook.com/" target="_blank" rel="noreferrer noopener" data-gtm-category="Content Engagement" data-gtm-action="CTA Click" data-gtm-label="Facebook">Facebook</a><br><a href="http://www.linkedin.com/" target="_blank" rel="noreferrer noopener" data-gtm-category="Content Engagement" data-gtm-action="CTA Click" data-gtm-label="LinkedIn">LinkedIn</a><br><a href="http://www.twitter.com/" target="_blank" rel="noreferrer noopener" data-gtm-category="Content Engagement" data-gtm-action="CTA Click" data-gtm-label="Twitter">Twitter</a><br><a href="http://www.instagram.com/" target="_blank" rel="noreferrer noopener" data-gtm-category="Content Engagement" data-gtm-action="CTA Click" data-gtm-label="Instagram">Instagram</a></td></tr></tbody></table></figure>
+
+
+
+<p><strong>How do I disable or remove cookies?</strong></p>
+
+
+
+<p class="is-style-body-2">You can restrict, or otherwise change, the use of cookies on the Sites by visiting this “Cookie Notice.” A link to this “Cookie Notice” will be provided at the bottom of all web pages on the Sites. You may also restrict or disable the use of cookies through your browser. Each type of browser offers ways to restrict and delete cookies. For more information on how to manage cookies through your browser, please visit the appropriate link below.</p>
+
+
+
+<p class="is-style-body-2"><a href="http://windows.microsoft.com/en-ZA/windows7/How-to-manage-cookies-in-Internet-Explorer-9" target="_blank" rel="noreferrer noopener" data-gtm-category="Content Engagement" data-gtm-action="CTA Click" data-gtm-label="Internet Explorer">Internet Explorer</a><br><a href="https://support.mozilla.org/en-US/kb/enable-and-disable-cookies-website-preferences" target="_blank" rel="noreferrer noopener" data-gtm-category="Content Engagement" data-gtm-action="CTA Click" data-gtm-label="Firefox">Firefox</a><br><a href="https://support.google.com/chrome/answer/95647?hl=en" target="_blank" rel="noreferrer noopener" data-gtm-category="Content Engagement" data-gtm-action="CTA Click" data-gtm-label="Google Chrome">Google Chrome</a><br><a href="https://support.apple.com/kb/ph17191?locale=en_US" target="_blank" rel="noreferrer noopener" data-gtm-category="Content Engagement" data-gtm-action="CTA Click" data-gtm-label="Safari">Safari</a></p>
+
+
+
+<p class="is-style-body-2">Furthermore, you can delete Flash cookies or adjust your Flash cookie settings by visiting the Adobe Flash&nbsp;<a href="http://www.macromedia.com/support/documentation/en/flashplayer/help/settings_manager07.html" target="_blank" rel="noreferrer noopener" data-gtm-category="Content Engagement" data-gtm-action="CTA Click" data-gtm-label="Website Storage Settings Panel">Website Storage Settings Panel</a>&nbsp;and&nbsp;<a href="http://www.macromedia.com/support/documentation/en/flashplayer/help/settings_manager03.html" target="_blank" rel="noreferrer noopener" data-gtm-category="Content Engagement" data-gtm-action="CTA Click" data-gtm-label="Global Storage Settings Panel">Global Storage Settings Panel</a>.</p>
+
+
+
+<p class="is-style-body-2 mb-xxlarge">For more information on how we collect, use and share your personal information, please read the&nbsp;<a href="https://www.blackstone.com/privacy" data-gtm-category="Content Engagement" data-gtm-action="CTA Click" data-gtm-label="Blackstone Online Privacy Notice">Blackstone Online Privacy Notice</a>.</p>
+						</div>
+
+</div> <!-- /#content -->
+
+
+<div id="eu-cookie-notice" class="dialog-container bs-lightbox" aria-hidden="true">
+	<div class="dialog-overlay" tabindex="-1"></div>
+	<div class="dialog-content dialog-content--large" aria-labelledby="eu-cookie-notice-title" role="alertdialog">
+					<h3 id="eu-cookie-notice-title">
+				Contact Information and Consent Request			</h3>
+		
+					<h5 id="eu-cookie-notice-subtitle">
+				Blackstone Cookie Policy			</h5>
+		
+					<p>
+				This website uses cookies, including third-party cookies, in order to obtain information about your visit to the website and make this website better. Please click on the link "Learn More" if you would like more information about the cookies used on this website and how to change your cookie settings. Otherwise, we will assume you're OK to continue.			</p>
+		
+		<div class="dialog-footer">
+							<button id="eu-cookie-notice-decline" type="button" class="dialog-footer__button bs-button" data-a11y-dialog-hide="" aria-label="Continue without cookies&gt;">Continue without cookies</button>
+			
+							<button id="eu-cookie-notice-accept" type="button" class="dialog-footer__button bs-button" data-a11y-dialog-hide="" aria-label="Continue with cookies">Continue with cookies</button>
+					</div>
+	</div>
+</div>
+		<footer class="site-footer site-footer__blackstone" role="contentinfo" id="footer">
+							<nav class="site-footer-middle site-footer-middle--top" aria-label="Privacy Menu">
+					<div class="container-fluid container-fluid--full">
+						<ul id="menu-footer-top" class="site-footer__menu site-footer-top__menu"><li id="menu-item-403" class="menu-item menu-item--column menu-item-type-column menu-item-object-custom menu-item-has-children menu-item-403"><a style="display: none;" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" data-gtm-label="Footer">Menu Column</a>
+<ul class="sub-menu">
+<li class="menu-item menu-item--title"><span class="is-style-h5">Quick Links</span></li>
+	<li id="menu-item-405" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-405"><a href="https://www.blackstone.com/the-firm/" class="is-style-cta" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" data-gtm-label="Quick Links | The Firm">The Firm</a></li>
+	<li id="menu-item-407" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-407"><a href="https://www.blackstone.com/the-firm/our-people/" class="is-style-cta" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" data-gtm-label="Quick Links | Our People">Our People</a></li>
+	<li id="menu-item-2532" class="menu-item menu-item-type-post_type_archive menu-item-object-press-release menu-item-2532"><a href="https://www.blackstone.com/press-releases/" class="is-style-cta" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" data-gtm-label="Quick Links | Press Releases">Press Releases</a></li>
+</ul>
+</li>
+<li id="menu-item-408" class="menu-item menu-item--column menu-item-type-column menu-item-object-custom menu-item-has-children menu-item-408"><a style="display: none;" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" data-gtm-label="Footer">Menu Column</a>
+<ul class="sub-menu">
+<li class="menu-item menu-item--title"><span class="is-style-h5">Explore Blackstone</span></li>
+	<li id="menu-item-409" class="menu-item menu-item--column menu-item-type-column menu-item-object-custom menu-item-has-children menu-item-409"><a class="is-style-cta" style="display: none;">Menu Column</a>
+	<ul class="sub-menu">
+		<li id="menu-item-414" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-414"><a href="https://www.blackstone.com/our-businesses/private-equity/" class="is-style-cta" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" data-gtm-label="Footer | Private Equity">Private Equity</a></li>
+		<li id="menu-item-415" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-415"><a href="https://www.blackstone.com/our-businesses/real-estate/" class="is-style-cta" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" data-gtm-label="Footer | Real Estate">Real Estate</a></li>
+		<li id="menu-item-411" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-411"><a href="https://www.blackstone.com/our-businesses/credit/" class="is-style-cta" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" data-gtm-label="Footer | Credit">Credit</a></li>
+		<li id="menu-item-412" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-412"><a href="https://www.blackstone.com/our-businesses/hedge-fund-solutions-baam/" class="is-style-cta" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" data-gtm-label="Footer | Hedge Fund Solutions (BAAM)">Hedge Fund Solutions (BAAM)</a></li>
+		<li id="menu-item-416" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-416"><a href="https://www.blackstone.com/our-businesses/strategic-partners/" class="is-style-cta" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" data-gtm-label="Footer | Strategic Partners">Strategic Partners</a></li>
+		<li id="menu-item-417" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-417"><a href="https://www.blackstone.com/our-businesses/tactical-opportunities/" class="is-style-cta" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" data-gtm-label="Footer | Tactical Opportunities">Tactical Opportunities</a></li>
+		<li id="menu-item-413" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-413"><a href="https://www.blackstone.com/our-businesses/infrastructure/" class="is-style-cta" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" data-gtm-label="Footer | Infrastructure">Infrastructure</a></li>
+	</ul>
+</li>
+	<li id="menu-item-418" class="menu-item menu-item--column menu-item-type-column menu-item-object-custom menu-item-has-children menu-item-418"><a class="is-style-cta" style="display: none;">Menu Column</a>
+	<ul class="sub-menu">
+		<li id="menu-item-420" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-420"><a href="https://www.blackstone.com/our-businesses/insurance-solutions/" class="is-style-cta" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" data-gtm-label="Footer | Insurance Solutions">Insurance Solutions</a></li>
+		<li id="menu-item-421" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-421"><a href="https://www.blackstone.com/our-businesses/life-sciences/" class="is-style-cta" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" data-gtm-label="Footer | Life Sciences">Life Sciences</a></li>
+		<li id="menu-item-6660" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6660"><a href="https://www.blackstone.com/our-businesses/portfolio-operations/" class="is-style-cta" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" data-gtm-label="Footer | Portfolio Operations">Portfolio Operations</a></li>
+		<li id="menu-item-419" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-419"><a href="https://www.blackstone.com/our-businesses/technologyandinnovations/" class="is-style-cta" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" data-gtm-label="Footer | Technology And Innovations">Technology and Innovations</a></li>
+		<li id="menu-item-422" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-422"><a href="https://www.blackstone.com/our-businesses/registered-products/" class="is-style-cta" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" data-gtm-label="Footer | Registered Products">Registered Products</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li id="menu-item-423" class="menu-item menu-item--column menu-item-type-column menu-item-object-custom menu-item-has-children menu-item-423"><a style="display: none;" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" data-gtm-label="Footer">Menu Column</a>
+<ul class="sub-menu">
+<li class="menu-item menu-item--title"><span class="is-style-h5">Get in Touch</span></li>
+	<li id="menu-item-425" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-425"><a href="https://www.blackstone.com/careers/" class="is-style-cta" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" data-gtm-label="Get in Touch | Careers">Careers</a></li>
+	<li id="menu-item-426" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-426"><a href="https://www.blackstone.com/the-firm/our-offices/" class="is-style-cta" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" data-gtm-label="Get in Touch | Our Offices">Our Offices</a></li>
+	<li id="menu-item-427" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-427"><a href="https://www.bxaccess.com/portal/" class="is-style-cta" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" data-gtm-label="Get in Touch | Limited Partner Login">Limited Partner Login</a></li>
+	<li id="menu-item-2574" class="get-started-lightbox menu-item menu-item-type-custom menu-item-object-custom menu-item-2574"><a href="https://www.blackstone.com/cookie-notice/#" class="is-style-cta" data-gtm-category="Form Engagement" data-gtm-action="CTA Click" data-gtm-label="Get in Touch | Contact Us">Contact Us</a></li>
+<li class="menu-item menu-item--social">
+<ul class="social-nav">
+	<li class="instagram">
+		<a href="https://www.instagram.com/blackstone/" target="_blank" rel="nofollow" data-gtm-category="Content Engagement" data-gtm-action="CTA Click" data-gtm-label="Footer | Instagram">
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>		</a>
+	</li>
+	<li class="facebook">
+		<a href="https://www.facebook.com/blackstone" target="_blank" rel="nofollow" data-gtm-category="Content Engagement" data-gtm-action="CTA Click" data-gtm-label="Footer | Facebook">
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path></svg>		</a>
+	</li>
+	<li class="twitter">
+		<a href="https://twitter.com/blackstone" target="_blank" rel="nofollow" data-gtm-category="Content Engagement" data-gtm-action="CTA Click" data-gtm-label="Footer | Twitter">
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></svg>		</a>
+	</li>
+	<li class="linkedin">
+		<a href="https://www.linkedin.com/company/blackstonegroup/" target="_blank" rel="nofollow" data-gtm-category="Content Engagement" data-gtm-action="CTA Click" data-gtm-label="Footer | LinkedIn">
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"></path></svg>		</a>
+	</li>
+	<li class="email">
+		<a href="https://www.blackstone.com/cookie-notice/#" data-a11y-dialog-show="stay-up-to-date-lightbox" data-gtm-category="Content Engagement" data-gtm-action="CTA Click" data-gtm-label="Footer | Email">
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 12.713l-11.985-9.713h23.97l-11.985 9.713zm0 2.574l-12-9.725v15.438h24v-15.438l-12 9.725z"></path></svg>
+		</a>
+	</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>					</div>
+				</nav>
+			
+			
+							<div class="site-footer-bottom">
+					<div class="container-fluid container-fluid--full">
+						<nav aria-label="Footer Navigation" class="site-footer-bottom__nav">
+							<ul id="menu-footer-bottom" class="site-footer__menu site-footer-bottom__menu"><li class="menu-item menu-item--title"><span class="is-style-p">© The Blackstone Group Inc.</span></li>
+<li id="menu-item-434" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-434"><a href="https://www.blackstone.com/transparency-disclosure/" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" data-gtm-label="Footer | Transparency &amp; Disclosure">Transparency &amp; Disclosure</a></li>
+<li id="menu-item-433" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-433"><a href="https://www.blackstone.com/legal/" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" data-gtm-label="Footer | Legal">Legal</a></li>
+<li id="menu-item-432" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-432"><a href="https://www.blackstone.com/privacy/" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" data-gtm-label="Footer | Privacy">Privacy</a></li>
+<li id="menu-item-430" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-244 current_page_item menu-item-430"><a href="https://www.blackstone.com/cookie-notice/" aria-current="page" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" data-gtm-label="Footer | Cookie Policy (EU)">Cookie Policy (EU)</a></li>
+<li id="menu-item-431" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-431"><a href="https://www.blackstone.com/japan-disclaimer/" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" data-gtm-label="Footer | Japan Disclaimer">Japan Disclaimer</a></li>
+</ul>						</nav>
+					</div>
+				</div>
+					</footer>
+
+		
+<div id="stay-up-to-date-lightbox" class="dialog-container bs-lightbox" aria-hidden="true">
+	<div class="dialog-overlay" tabindex="-1" data-a11y-dialog-hide=""></div>
+	<div class="stay-up-to-date-lightbox dialog-content dialog-content--from-right is-style-body-2 dialog-content--narrow" aria-labelledby="stay-up-to-date-lightbox-title" role="dialog">
+		<button class="dialog-close-button" type="button" data-a11y-dialog-hide="" aria-label="Close this dialog window">
+			<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="357px" height="357px" viewBox="0 0 357 357" xml:space="preserve">
+	<polygon fill="currentColor" points="357,35.7 321.3,0 178.5,142.8 35.7,0 0,35.7 142.8,178.5 0,321.3 35.7,357 178.5,214.2 321.3,357 357,321.3 214.2,178.5"></polygon>
+</svg>
+		</button>
+
+		<h2 id="stay-up-to-date-lightbox-title" class="is-style-h1">
+			Stay up-to-date		</h2>
+		<h3 class="is-style-h4">
+			Email Alerts		</h3>
+		<p class="recive-email-alerts">
+			To receive email alerts from Blackstone, sign up below.		</p>
+		<form data-pardot-endpoint="https://go.pardot.com/l/213192/2017-05-05/nz68" class="stay-up-to-date-form form--two-columns" novalidate="">
+			<div class="input-group">
+				<label class="screen-reader-text" for="stay-up-to-date-email">
+					Email Address*				</label>
+				<input type="text" id="stay-up-to-date-email" placeholder="Email Address*" name="email" data-gtm-category="Form Engagement" data-gtm-action="CTA Click" data-gtm-label="Email Alerts | Email address" required="">
+			</div>
+			<div class="input-group input-group--half">
+				<label class="screen-reader-text" for="stay-up-to-date-first-name">
+					First Name*				</label>
+				<input type="text" id="stay-up-to-date-first-name" placeholder="First Name*" name="first_name" data-gtm-category="Form Engagement" data-gtm-action="CTA Click" data-gtm-label="Email Alerts | First name" required="">
+			</div>
+			<div class="input-group input-group--half">
+				<label class="screen-reader-text" for="stay-up-to-date-last-name">
+					Last Name*				</label>
+				<input type="text" id="stay-up-to-date-last-name" placeholder="Last Name*" name="last_name" data-gtm-category="Form Engagement" data-gtm-action="CTA Click" data-gtm-label="Email Alerts | Last name" required="">
+			</div>
+			<div class="input-group input-group--half">
+				<label class="screen-reader-text" for="stay-up-to-date-company">
+					Company Name				</label>
+				<input type="text" id="stay-up-to-date-company" placeholder="Company Name" name="company" data-gtm-category="Form Engagement" data-gtm-action="CTA Click" data-gtm-label="Email Alerts | Company name">
+			</div>
+			<div class="input-group input-group--half">
+				<label class="screen-reader-text" for="stay-up-to-date-job-title">
+					Job Title				</label>
+				<input type="text" id="stay-up-to-date-job-title" placeholder="Job Title" name="job_title" data-gtm-category="Form Engagement" data-gtm-action="CTA Click" data-gtm-label="Email Alerts | Job title">
+			</div>
+			<div class="input-group">
+				<label class="checkbox-label">
+					<input id="stay-up-to-date-market-commentary" name="list_byron_market_commentary" type="checkbox" value="1" checked=""><span class="checkmark"></span>
+					Market commentary from Byron Wien and Joe Zidle				</label>
+				<label class="checkbox-label">
+					<input id="stay-up-to-date-press-releases" name="list_press_releases" type="checkbox" value="1" checked=""><span class="checkmark"></span>
+					Press Releases				</label>
+				<label class="checkbox-label">
+					<input id="stay-up-to-date-foundation-newsletter" name="list_foundation_newsletter" type="checkbox" value="1" checked=""><span class="checkmark"></span>
+					Charitable Foundation newsletter				</label>
+			</div>
+
+			<input type="hidden" class="bxid-input" name="bxid" value="bf4cd012-d0cc-47a4-a0ce-83b103266caf">
+			<input type="hidden" name="URL" value="https://www.blackstone.com/cookie-notice/">
+
+			<div class="wp-block-button mt-large">
+				<button class="wp-block-button__link" type="submit" data-gtm-category="Form Engagement" data-gtm-action="CTA Click" data-gtm-label="Email Alerts | Submit">
+					Submit				</button>
+			</div>
+		</form>
+	</div>
+</div>
+
+<div id="get-started-lightbox" class="dialog-container bs-lightbox" aria-hidden="true">
+	<div class="dialog-overlay" tabindex="-1" data-a11y-dialog-hide=""></div>
+
+	<div class="contact-lightbox dialog-content dialog-content--from-right is-style-body-2 dialog-content--narrow" aria-labelledby="get-started-lightbox-title" role="dialog">
+		<button class="dialog-close-button" type="button" data-a11y-dialog-hide="" aria-label="Close this dialog window">
+			<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="357px" height="357px" viewBox="0 0 357 357" xml:space="preserve">
+	<polygon fill="currentColor" points="357,35.7 321.3,0 178.5,142.8 35.7,0 0,35.7 142.8,178.5 0,321.3 35.7,357 178.5,214.2 321.3,357 357,321.3 214.2,178.5"></polygon>
+</svg>
+		</button>
+
+		<h2 id="get-started-lightbox-title" class="is-style-h1">
+			Contact Us		</h2>
+
+		<p>
+			For office-specific contact information, please visit our <a href="https://www.blackstone.com/the-firm/our-offices/" data-gtm-action="CTA Click" data-gtm-category="Form Engagement" data-gtm-label="Contact Us | our offices page">our offices page</a>. Switchboard: <a href="tel:12125835000" data-gtm-action="CTA Click" data-gtm-category="Form Engagement" data-gtm-label="Contact Us | Switchboard: +1 (212) 583-5000">+1 (212) 583-5000</a>
+		</p>
+
+		<h2 class="is-style-h4 mt-large">
+			Investor Relations		</h2>
+
+		<p>
+			For investor relations contact information or to receive email notifications for SEC filings, events, end of day stock quotes, and financial reports, please visit our <a href="https://ir.blackstone.com/investors/contact-us-and-email-alerts/default.aspx" data-gtm-action="CTA Click" data-gtm-category="Form Engagement" data-gtm-label="Contact Us | Investor Relations page">Investor Relations page</a>.
+		</p>
+
+		<p>
+			US: <a href="tel:18887568443" data-gtm-action="CTA Click" data-gtm-category="Form Engagement" data-gtm-label="Contact Us | US: +1 888-756-8443">+1 888-756-8443</a>
+			<br>
+			International: <a href="tel:16463136590" data-gtm-action="CTA Click" data-gtm-category="Form Engagement" data-gtm-label="Contact Us | International: +1 646-313-6590">+1 646-313-6590</a>
+			<br>
+			<a href="mailto:BlackstoneInvestorRelations@blackstone.com" data-gtm-action="CTA Click" data-gtm-category="Form Engagement" data-gtm-label="Contact Us | BlackstoneInvestorRelations@blackstone.com">BlackstoneInvestorRelations@blackstone.com</a>
+		</p>
+
+		<h2 class="is-style-h4 mt-xlarge">
+			Media Contacts		</h2>
+
+		<p class="mb-xsmall">
+			For press inquiries, contact <a href="mailto:pressinquiries@blackstone.com" data-gtm-action="CTA Click" data-gtm-category="Form Engagement" data-gtm-label="Contact Us | pressinquiries@blackstone.com">pressinquiries@blackstone.com</a>.
+		</p>
+
+		<p class="mt-xsmall">
+			To view recent press releases, <a href="https://www.blackstone.com/press-releases" data-gtm-action="CTA Click" data-gtm-category="Form Engagement" data-gtm-label="Contact Us | Press Releases">click here</a>.
+		</p>
+	</div>
+</div>
+
+<div id="brightcove-lightbox" class="dialog-container" aria-hidden="true">
+	<div class="dialog-overlay" tabindex="-1" data-a11y-dialog-hide=""></div>
+	<div class="dialog-content dialog-content--no-padding dialog-content--video" aria-labelledby="brightcove-lightbox-title" role="dialog">
+		<button class="dialog-close-button" type="button" data-a11y-dialog-hide="" aria-label="Close this dialog window">
+			<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="357px" height="357px" viewBox="0 0 357 357" xml:space="preserve">
+	<polygon fill="currentColor" points="357,35.7 321.3,0 178.5,142.8 35.7,0 0,35.7 142.8,178.5 0,321.3 35.7,357 178.5,214.2 321.3,357 357,321.3 214.2,178.5"></polygon>
+</svg>
+		</button>
+		<h1 id="brightcove-lightbox-title" class="screen-reader-text">
+			Brightcove Lightbox		</h1>
+	</div>
+</div>
+
+<div class="bstn-spinner" aria-hidden="true">
+	<svg class="icon-spinner" viewBox="0 0 66 66"><circle fill="none" stroke-width="4" cx="33" cy="33" r="30"></circle></svg>
+</div>
+<script src="./Cookie Policy (EU) - Blackstone_files/wp-polyfill.min.js" id="wp-polyfill-js"></script>
+<script id="wp-polyfill-js-after">
+( 'fetch' in window ) || document.write( '<script src="https://www.blackstone.com/wp-includes/js/dist/vendor/wp-polyfill-fetch.min.js?ver=3.0.0"></scr' + 'ipt>' );( document.contains ) || document.write( '<script src="https://www.blackstone.com/wp-includes/js/dist/vendor/wp-polyfill-node-contains.min.js?ver=3.42.0"></scr' + 'ipt>' );( window.DOMRect ) || document.write( '<script src="https://www.blackstone.com/wp-includes/js/dist/vendor/wp-polyfill-dom-rect.min.js?ver=3.42.0"></scr' + 'ipt>' );( window.URL && window.URL.prototype && window.URLSearchParams ) || document.write( '<script src="https://www.blackstone.com/wp-includes/js/dist/vendor/wp-polyfill-url.min.js?ver=3.6.4"></scr' + 'ipt>' );( window.FormData && window.FormData.prototype.keys ) || document.write( '<script src="https://www.blackstone.com/wp-includes/js/dist/vendor/wp-polyfill-formdata.min.js?ver=3.0.12"></scr' + 'ipt>' );( Element.prototype.matches && Element.prototype.closest ) || document.write( '<script src="https://www.blackstone.com/wp-includes/js/dist/vendor/wp-polyfill-element-closest.min.js?ver=2.0.2"></scr' + 'ipt>' );
+</script>
+<script id="blackstone-core-js-extra">
+var bxGeoLocation = {"countryCode":"US","gdprCountries":["AT","BE","BG","CY","CZ","DK","EE","EU","FI","FR","DE","GR","HU","IE","IT","LV","LT","LU","MT","NL","PL","PT","RO","SK","SI","ES","SE","GB","US"]};
+</script>
+<script type="text/javascript" src="./Cookie Policy (EU) - Blackstone_files/saved_resource(1)"></script>
+<script src="./Cookie Policy (EU) - Blackstone_files/lodash.min.js" id="lodash-js"></script>
+<script id="lodash-js-after">
+window.lodash = _.noConflict();
+</script>
+<script id="frontend-js-extra">
+var gtmKey = "GTM-MGLNRHM";
+</script>
+<script type="text/javascript" src="./Cookie Policy (EU) - Blackstone_files/saved_resource(2)"></script>
+<script type="text/javascript" src="./Cookie Policy (EU) - Blackstone_files/e-202052.js" async="async" defer="defer"></script>
+<script type="text/javascript">
+	_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:9.2.1',blog:'172058796',post:'244',tz:'-5',srv:'www.blackstone.com'} ]);
+	_stq.push([ 'clickTrackerInit', '172058796', '244' ]);
+</script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"NRJS-a87f8c3ef941511fee4","applicationID":"333231826","transactionName":"b1RaZksDDBVQBxZdC1YebUBQTQsIVQEaGhRQQQ==","queueTime":0,"applicationTime":257,"atts":"QxNNEAMZH0oTBUAOH0VM","errorBeacon":"bam.nr-data.net","agent":""}</script>
+
+<img src="./Cookie Policy (EU) - Blackstone_files/g.gif" alt=":)" width="6" height="5" id="wpstats"> 
+<script type="text/javascript" id="">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","363036464153754");fbq("track","PageView");</script> 
+<script src="./Cookie Policy (EU) - Blackstone_files/adsct" type="text/javascript"></script></body></html>
