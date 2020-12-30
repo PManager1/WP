@@ -10,14 +10,17 @@ https://www.carlyle.com/our-people#board-of-directors
 
 Goldman Sachs ?
 
-CVC - 
+CVC -  ( Do )
 https://craft.co/cvc-capital-partners/executives
+https://www.cvc.com/people/directory
+
 
 ARES?
 https://www.aresmgmt.com/about-ares-management-corporation/our-team
 
 Apollo - 
 https://www.apollo.com/stockholders/corporate-governance
+https://www.apollo.com/about-apollo
 
 Morgan Stanley 
 https://www.morganstanley.com/about-us-governance/board
