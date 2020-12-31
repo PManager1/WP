@@ -31,14 +31,14 @@
 					label: 'By yourself',
 					backgroundColor: window.chartColors.blue,
 					borderColor: window.chartColors.blue,
-					data: [5, 5, 5, 20, 25, 34, -10],
+					data: [0, 3, 2, 1, 2, 1, -10],
 					fill: false,
 				}, {
 					label: 'Working with us.',
 					fill: false,
 					backgroundColor: window.chartColors.red,
 					borderColor: window.chartColors.red,
-					data: [18, 33, 22, 19, 11, 39, 30],
+					data: [0, 19, 20, 18, 19, 20, 20],
 				}]
 			},
 			options: {
@@ -51,9 +51,10 @@
 					y: {
 						// the data minimum used for determining the ticks is Math.min(dataMin, suggestedMin)
 						suggestedMin: 0,
+						position: 'right',
 
 						// the data maximum used for determining the ticks is Math.max(dataMax, suggestedMax)
-						suggestedMax: 50
+						suggestedMax: 30
 					}
 				}
 			}
@@ -64,6 +65,25 @@
 			window.myLine = new Chart(ctx, config);
 		};
 	</script>
+
+	<h3>Number of companies joined by 2026 = 100 </h3>
+	<input type="text" value="100">
+
+	<h3>Exit at Ebidta multiple of  </h3>
+	<input type="text" value="12">
+
+	<h3>Equity available to all Dentists = 1200 Mi/ 2 = 600 Mi </h3>
+	<input type="text" value="60000000">
+
+	<h3>Each dentist could get = 600Mi / 100 = 6Mi </h3>
+	<input type="text" value="60000000">
+
+	<h3>If 100 points equate to 6 Million</h3>
+
+	<h3>Each point will be worth $6000</h3>
+	
+     
+
 </body>
 
 </html>

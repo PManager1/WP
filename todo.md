@@ -42,6 +42,11 @@ Vista equity partners
 https://www.vistaequitypartners.com/about/team/
 
 
+Black Rock - 
+https://ir.blackrock.com/governance/board-of-directors/default.aspx
+https://wallmine.com/people/47761/mathis-cabiallavetta
+
+
 
 
 
