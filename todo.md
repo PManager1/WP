@@ -54,7 +54,12 @@ https://wallmine.com/people/47761/mathis-cabiallavetta
 
 
 
+Charts - 
+https://www.chartjs.org/samples/latest/charts/line/multi-axis.html
 
+https://www.chartjs.org/samples/latest/scales/linear/step-size.html
+
+https://www.chartjs.org/samples/latest/scales/linear/min-max.html
 
 
 
@@ -86,3 +91,10 @@ Video player code on index.
 
 	<p></p>
 </div>
+
+
+
+APPP - 
+Install the react charts in it and make it work for opportunity costs etc. 
+
+
