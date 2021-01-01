@@ -94,7 +94,9 @@ Video player code on index.
 
 
 
-APPP - 
+APP - 
 Install the react charts in it and make it work for opportunity costs etc. 
 
+Create page with Values: 
+https://heartland.com/who-we-are/heartland-dental.html
 
